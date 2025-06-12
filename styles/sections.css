@@ -1,8 +1,7 @@
 #featured {
-img {
+    img {
     height: 100%;
     object-fit: cover;
-    border-radius: 4px;
   }
 
   .card {
@@ -10,15 +9,15 @@ img {
     overflow: hidden;
     position: relative;
 
-    &::before {
+      &::before {
       content: "";
       position: absolute;
       inset: 0;
       top: 50%;
       background: linear-gradient(
-        180deg
-        transparent 0%
-        #020617 100%
+        180deg,
+        transparent 0,
+        #020617 100%,
       );
     }
 
@@ -27,6 +26,10 @@ img {
       bottom: 0;
 
       padding: 24px;
+
+      &:has(.text-lg) {
+        padding: 12px;
+      }
 
       h2 {
         margin-top: 8px;
